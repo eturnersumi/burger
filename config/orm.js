@@ -1,5 +1,5 @@
 //Import MySQL connection
-var connection = require("../burger/config/connection.js");
+var connection = require("../config/connection.js");
 
 
 function printQuestionMarks(num) {
