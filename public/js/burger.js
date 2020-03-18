@@ -8,7 +8,7 @@ $(function() {
         var newDevour = $(this).data("newdevour");
 
         var newDevourState = {
-            devour: newDevour
+            devoured: newDevour
         };
 
         //Send updated devour state via put request 

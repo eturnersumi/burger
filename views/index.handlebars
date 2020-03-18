@@ -10,7 +10,7 @@
     <li>
 	    {{burger_name}}
 
-        <button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
+        <button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">
             {{!-- {{#if devour}}DEVOUR!{{/if}} --}}
             DEVOUR
         </button>
@@ -26,7 +26,13 @@
     <ul>
       {{#each burgers}}
       {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+      <li>
+	    {{burger_name}}
+
+        {{!-- <button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">
+            DEVOUR
+        </button> --}}
+    </li>
       {{/if}}
       {{/each}}
     </ul>
