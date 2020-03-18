@@ -1,0 +1,44 @@
+<h1>Eat-Da-Burger</h1>
+
+
+<div class="row">
+  <div class="col-6">
+    <h2>Burgers that aren't devoured</h2>
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+    <li>
+	    {{burger_name}}
+
+        <button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
+            {{!-- {{#if devour}}DEVOUR!{{/if}} --}}
+            DEVOUR
+        </button>
+    </li>
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="col-6">
+    <h2>Burgers that are devoured</h2>
+
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<h2>Add a Burger!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="bu" name="name">
+  </div>
+  <button type="submit">Add Burger</button>
+</form>
+
